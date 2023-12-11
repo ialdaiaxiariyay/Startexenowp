@@ -4,9 +4,12 @@ using System.IO;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using SnakeGame;
-
+using ialdLibrary;
+using WebOpener;
 class Program
 {
+    private static object assembly;
+
     static void Main()
     {
         // 设置st.json文件的路径为当前工作目录
@@ -77,15 +80,13 @@ class Program
                     Snake game = new Snake();
                     game.Start();
                 }
-                //else if (input == "wy")
-                //{
-                    //var assembly = System.Reflection.Assembly.LoadFrom("WebOpener.dll");
-                    //var webOpenerType = assembly.GetType("WebOpener");
-                    //dynamic webOpener = Activator.CreateInstance(webOpenerType);
+                else if (input == "wy")
+                {
+                    WebOp webOpener = new WebOp();
 
-                    // 打开指定的网页
-                   // webOpener.OpenWebPage("https://www.ialdaiaxiariyay.top");
-                //}
+                    // 使用实例调用OpenWebPage方法
+                    webOpener.OpenWebPage("https://www.ialdaiaxiariyay.top");
+                }
                 else
                 {
                     Console.WriteLine("未知指令。请输入exit或stop。");

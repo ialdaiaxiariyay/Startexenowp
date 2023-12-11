@@ -18,4 +18,10 @@
     <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.19" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Reference Include="ialdLibrary">
+      <HintPath>ialdLibrary.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
 </Project>
